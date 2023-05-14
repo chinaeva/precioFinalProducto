@@ -1,6 +1,6 @@
 package org.precioFinalProducto.service;
 
-import org.precioFinalProducto.model.PricesDTO;
+import org.precioFinalProducto.model.dto.PricesDTO;
 
 public interface PricesService {
 

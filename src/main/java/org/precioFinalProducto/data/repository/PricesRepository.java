@@ -16,5 +16,5 @@ public interface PricesRepository extends JpaRepository<PricesEntity, Integer> {
             "WHERE BRAND_ID = ?1 " +
             "  AND PRODUCT_ID = ?2" +
             "  AND ?3 BETWEEN START_DATE AND END_DATE", nativeQuery = true)
-    List<PricesEntity> findByIdProductoIdCadenaFechaAplicacion(Integer brandId, String productId, String date);
+    PricesEntity findByIdProductoIdCadenaFechaAplicacion(Integer brandId, String productId, String date);
 }

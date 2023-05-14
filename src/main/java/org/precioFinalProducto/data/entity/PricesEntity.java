@@ -33,13 +33,13 @@ public class PricesEntity {
     private Date endDate;
 
     @Column(name = "PRICE_LIST")
-    private String priceList;
+    private Integer priceList;
 
     @Column(name = "PRIORITY")
     private int priority;
 
     @Column(name = "PRICE")
-    private double price;
+    private Double price;
 
     @Column(name = "CURR")
     private String curr;

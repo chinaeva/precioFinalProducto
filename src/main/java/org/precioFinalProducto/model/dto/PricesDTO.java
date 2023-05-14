@@ -1,4 +1,4 @@
-package org.precioFinalProducto.model;
+package org.precioFinalProducto.model.dto;
 
 import lombok.Data;
 
