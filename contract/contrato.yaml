@@ -1,0 +1,68 @@
+openapi: 3.0.3
+info:
+  title: Calculo precio final
+  contact:
+    email: chinaeva.anastasia@gmail.com
+  version: 0.0.1
+tags:
+  - name: calculoPrecio
+    description: Endpoints para calcular el precio final de un producto.
+paths:
+  /precioFinal:
+    put:
+      tags:
+        - calculoPrecio
+      summary: Calcular el precio final de un producto.
+      description: Calcula el precio final de un producto utilizando el ID del producto y el ID de la cadena.
+      operationId: calcularPrecioFinal
+      requestBody:
+        description: Datos de entrada para calcular el precio final del producto.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DatosEntrada'
+      responses:
+        '200':
+          description: Operación exitosa
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DatosSalida'
+        '400':
+          description: ID inválido proporcionado
+        '404':
+          description: Producto no encontrado
+        '405':
+          description: Excepción de validación
+components:
+  schemas:
+    DatosEntrada:
+      required:
+        - idProducto
+        - idCadena
+      type: object
+      properties:
+        fechaAplicacion:
+          type: string
+          format: date-time
+        idProducto:
+          type: string
+        idCadena:
+          type: string
+    DatosSalida:
+      type: object
+      properties:
+        idProducto:
+          type: string
+        idCadena:
+          type: string
+        tarifa:
+          type: string
+        fechasAplicacion:
+          type: array
+          items:
+            type: string
+            format: date-time
+        precioFinal:
+          type: string
