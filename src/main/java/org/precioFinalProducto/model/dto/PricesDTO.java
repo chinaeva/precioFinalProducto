@@ -1,16 +1,18 @@
 package org.precioFinalProducto.model.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Data
+@AllArgsConstructor
 public class PricesDTO {
 
     private String idProducto;
     private String idCadena;
     private String tarifa;
-    private LocalDate fechaAplicacion;
+    private LocalDateTime fechaAplicacion;
     private String precioFinal;
 
 }
