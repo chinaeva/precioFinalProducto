@@ -7,7 +7,9 @@ import org.precioFinalProducto.model.utils.MapperUtils;
 import org.precioFinalProducto.service.PricesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
 public class CalculoPrecioController implements CalculoPrecioApi {
 
     @Autowired

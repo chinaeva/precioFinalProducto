@@ -7,11 +7,11 @@ import org.precioFinalProducto.service.PricesService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PricesServiceIml implements PricesService {
+public class PricesServiceImpl implements PricesService {
 
     private final PricesRepository pricesRepository;
 
-    public PricesServiceIml(PricesRepository pricesRepository) {
+    public PricesServiceImpl(PricesRepository pricesRepository) {
         this.pricesRepository = pricesRepository;
     }
 

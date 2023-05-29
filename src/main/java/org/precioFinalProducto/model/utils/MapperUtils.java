@@ -42,4 +42,10 @@ public interface MapperUtils {
         finalPrice.append(curr);
         return finalPrice.toString();
     }
+
+    @Mapping(source = "productId", target = "idProduct")
+    @Mapping(source = "brandId", target = "idCadena")
+    @Mapping(source = "price", target = "tarifa")
+    @Mapping(source = "price", target = "finalPriceString")
+    PricesEntity pricesDTOToPricesEntity(PricesDTO expectedResponse);
 }
